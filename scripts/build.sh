@@ -19,18 +19,6 @@ if [ -z "$SYNC_BRANCH" ]; then
     export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
 fi
 
-# Set-up ccache
-if [ -z "$CCACHE_SIZE" ]; then
-    ccache -M 10G
-else
-    ccache -M ${CCACHE_SIZE}
-fi
-
-# Empty the VTS Makefile
-if [ -f frameworks/base/core/xsd/vts/Android.mk ]; then
-    rm -rf frameworks/base/core/xsd/vts/Android.mk && touch frameworks/base/core/xsd/vts/Android.mk
-fi
-
 # Send the Telegram Message
 
 echo -e \
@@ -52,27 +40,10 @@ echo " "
 # Prepare the Build Environment
 source build/envsetup.sh
 
-# Run the Extra Command
-$EXTRA_CMD
-
 # export some Basic Vars
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 export LC_ALL="C"
-
-# Default Build Type
-if [ -z "$FOX_BUILD_TYPE" ]; then
-    export FOX_BUILD_TYPE="Unofficial-CI"
-fi
-
-# Default Maintainer's Name
-[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
-
-# Legacy Build Systems
-if [ $(echo $SYNC_BRANCH | cut -d. -f1) -le 6 ]; then
-    export OF_DISABLE_KEYMASTER2=1 # Disable Keymaster2
-    export OF_LEGACY_SHAR512=1 # Fix Compilation on Legacy Build Systems
-fi
 
 # lunch the target
 if [ "$FOX_BRANCH" = "fox_11.0" ]; then
