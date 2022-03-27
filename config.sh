@@ -5,7 +5,7 @@ export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/OrangeFoxUnOfficial/twrp_redmi_begonia -b android-11.0"
 
 export DEVICE="begonia"
-export OEM="xiaomi"
+export OEM="redmi"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
@@ -23,7 +23,6 @@ export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
 export CCACHE_SIZE="50G"
 export CCACHE_DIR="$HOME/work/.ccache"
-export J_VAL=16
 
 #if [ ! -z "$PLATFORM" ]; then
 #    export KERNEL_PATH="kernel/$OEM/$PLATFORM"
