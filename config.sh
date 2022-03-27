@@ -25,9 +25,9 @@ export CCACHE_SIZE="50G"
 export CCACHE_DIR="$HOME/work/.ccache"
 export J_VAL=16
 
-if [ ! -z "$PLATFORM" ]; then
-    export KERNEL_PATH="kernel/$OEM/$PLATFORM"
-else
-    export KERNEL_PATH="kernel/$OEM/$DEVICE"
-fi
+#if [ ! -z "$PLATFORM" ]; then
+#    export KERNEL_PATH="kernel/$OEM/$PLATFORM"
+#else
+#   export KERNEL_PATH="kernel/$OEM/$DEVICE"
+#fi
 export DT_PATH="device/$OEM/$DEVICE"
