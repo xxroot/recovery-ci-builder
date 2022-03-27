@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/OrangeFoxUnOfficial/twrp_redmi_begonia -b android-11.0"
 
-export DEVICE="beryllium"
+export DEVICE="begonia"
 export OEM="xiaomi"
 export TARGET="recoveryimage"
 
@@ -16,7 +16,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
+#export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
