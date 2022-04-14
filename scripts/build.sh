@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Source Configs
-source $CONFIG
-
 # A Function to Send Posts to Telegram
 telegram_message() {
 	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
@@ -12,12 +9,7 @@ telegram_message() {
 }
 
 # Change to the Source Directry
-cd $SYNC_PATH
-
-# Sync Branch (will be used to fix legacy build system errors)
-if [ -z "$SYNC_BRANCH" ]; then
-    export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
-fi
+cd ~/twrp
 
 # Send the Telegram Message
 
@@ -42,15 +34,11 @@ source build/envsetup.sh
 
 # export some Basic Vars
 export ALLOW_MISSING_DEPENDENCIES=true
-export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
-export LC_ALL="C"
+#export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+#export LC_ALL="C"
 
 # lunch the target
-if [ "$FOX_BRANCH" = "fox_11.0" ]; then
-    lunch twrp_${DEVICE}-eng && mka -j$(nproc --all) $TARGET || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-else
-    lunch omni_${DEVICE}-eng && mka $TARGET || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-fi
+lunch omni_${DEVICE}-eng && mka $TARGET || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 
 # Exit
 exit 0

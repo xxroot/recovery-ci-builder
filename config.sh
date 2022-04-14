@@ -8,7 +8,7 @@ export DEVICE="X683"
 export OEM="infinix"
 export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox*.zip"
+export OUTPUT="recovery.img"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
