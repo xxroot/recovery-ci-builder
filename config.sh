@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_10.0"
 export DT_LINK="https://github.com/mastersenpai0405/recovery_device_infinix_X683"
 
 export DEVICE="X683"
