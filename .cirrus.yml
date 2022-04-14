@@ -1,6 +1,6 @@
 env:
     # OrangeFox Sync Repository
-    manifest: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
+    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
 
     # Config
     CONFIG: config.sh
