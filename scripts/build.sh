@@ -49,7 +49,7 @@ export LC_ALL="C"
 if [ "$FOX_BRANCH" = "fox_11.0" ]; then
     lunch twrp_${DEVICE}-eng && mka -j$(nproc --all) $TARGET || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 else
-    lunch omni_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+    lunch omni_${DEVICE}-eng && mka $TARGET || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 fi
 
 # Exit
