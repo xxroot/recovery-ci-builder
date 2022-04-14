@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/OrangeFoxUnOfficial/twrp_redmi_begonia -b android-11.0"
+export FOX_BRANCH="fox_10.0"
+export DT_LINK="https://github.com/mastersenpai0405/recovery_device_infinix_X683 -b android-11.0"
 
-export DEVICE="begonia"
-export OEM="redmi"
+export DEVICE="X683"
+export OEM="infinix"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
