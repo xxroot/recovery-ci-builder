@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $CONFIG
+
 # A Function to Send Posts to Telegram
 telegram_message() {
 	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
