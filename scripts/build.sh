@@ -20,8 +20,6 @@ echo -e \
 ✔️ The Build has been Triggered!
 
 📱 Device: "${DEVICE}
-🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
-" > tg.html
 
 TG_TEXT=$(< tg.html)
 
