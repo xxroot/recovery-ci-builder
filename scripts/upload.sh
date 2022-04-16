@@ -12,7 +12,7 @@ telegram_message() {
 }
 
 # Change to the Source Directory
-cd $SYNC_PATH
+cd /twrp
 
 # Color
 ORANGE='\033[0;33m'
@@ -55,12 +55,12 @@ DATE_S=$(date +"%T")
 # Send the Message on Telegram
 echo -e \
 "
-🦊 OrangeFox Recovery CI
+TWRP-CI
 
 ✅ Build Completed Successfully!
 
 📱 Device: "${DEVICE}"
-🖥 Build System: "${FOX_BRANCH}"
+🖥 Build System: "TWRP BUILDER"
 ⬇️ Download Link: <a href=\"${DL_LINK}\">Here</a>
 📅 Date: "$(date +%d\ %B\ %Y)"
 ⏱ Time: "$(date +%T)"
