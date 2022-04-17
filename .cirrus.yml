@@ -1,5 +1,5 @@
 env:
-    # OrangeFox Sync Repository
+    # RECOVERY REPOSITORY SOURCE TWRP,PBRP,SHRP
     MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
 
     # Config
@@ -21,14 +21,14 @@ task:
       memory: 20G
 
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/OrangeFox-CI/main/scripts/checks.sh | bash
+      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/recovery-ci-builder/main/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/OrangeFox-CI/main/scripts/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/recovery-ci-builder/main/scripts/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/OrangeFox-CI/main/scripts/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/mastersenpai0405/recovery-ci-builder/main/scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl https://raw.githubusercontent.com/mastersenpai0405/OrangeFox-CI/main/scripts/upload.sh | bash
+      - curl https://raw.githubusercontent.com/mastersenpai0405/recovery-ci-builder/main/scripts/upload.sh | bash
