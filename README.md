@@ -1,9 +1,11 @@
 # 🦊 OrangeFox Recovery CI
 A Free CI to Build OrangeFox Recovery
 
-Branch
+# TWRP BRANCH OR BUILDER
 1. This ci has 2 branch, Choose twrp-builder / OrangeFox builder branch
 2. For twrp builder you can use it for building any recovery just change what need to change
+3. Check manifest if what branch of twrp or recovery source in .cirrus.yml do you need
+4. Check config.sh what need to change
 
 ## How to Use?
 ### - Fork and Build
